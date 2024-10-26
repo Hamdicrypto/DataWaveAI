@@ -1,0 +1,54 @@
+.card-hover-1 {
+    position: relative;
+    overflow: hidden;
+    .card-body {
+        position: relative;
+        z-index: 1;
+    }
+    &:after {
+        content: "";
+        position:absolute;
+        top: 0px;
+        left: auto;
+        right: 0px;
+        margin: auto;
+        width: 0;
+        height: 100%;           
+        transition: ease all 0.35s;
+        opacity: 0;
+    }
+    &:hover {
+        .icon-primary {
+            background: $px-gray-800;
+        }
+        color: $px-white;
+        h5 {
+            color: $px-white;
+        }
+        &:after {
+            width: 100%;   
+            opacity: 1;
+            left: 0px;
+            right: auto;
+        }
+    }
+}
+
+
+.card-hover-2 {
+    position: relative;
+    overflow: hidden;
+    .card-body {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 100%;
+        transition: ease all 0.35s;
+    }
+    &:hover {
+        .card-body {
+            left: 0;
+        }
+    }
+}

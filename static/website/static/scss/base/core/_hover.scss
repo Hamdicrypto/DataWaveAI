@@ -1,0 +1,135 @@
+// Hover top
+.hover-top {
+	transition: ease-in-out all 0.35s;
+    position: relative;
+    top: 0;
+    &:hover {
+    	top: -10px;
+    }
+}
+
+.hover-top-in {
+     .hover-top--in {
+        transition: ease-in-out all 0.35s;
+        position: relative;
+        top: 0;
+    }
+    &:hover {
+        .hover-top--in {
+            top: -10px;
+        }
+    }
+}
+
+
+.hover-scale {
+    .hover-scale-in {
+        overflow: hidden;
+        img {
+            transition: ease all 0.35s;
+            transform: scale(1);
+        }
+    }
+    &:hover {
+        .hover-scale-in {
+            img {
+                transform: scale(1.05);
+            }
+        }   
+    }
+}
+
+
+.flip-box {
+    position: relative;
+    overflow: hidden;
+    .flip-box-img {
+        transition: ease all 0.35s;
+        transform: rotateY(0deg);
+    }
+    .flip-box-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: ease all 0.35s;
+        transform: rotateY(180deg);
+    }
+    &:hover {
+        .flip-box-img {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+        .flip-box-content {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+}
+
+.line-hover {
+    position: relative;
+    overflow: hidden;
+    &:before,
+    &:after {
+        content:"";
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transition: ease all 0.3s;
+        pointer-events: none;
+    }
+    &:before {
+        top: 0;
+        left:0;
+        border-left: 5px solid $px-primary;
+        border-top: 5px solid $px-primary;
+    }
+    &:after {
+        bottom: 0;
+        right: 0;
+        border-right: 5px solid $px-primary;
+        border-bottom: 5px solid $px-primary;
+    }
+    &:hover {
+        &:after,
+        &:before {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+.fancy-box-01 {
+    position: relative;
+    .left-f {
+        border: 10px solid;
+        border-right: none;
+        height: 100%;
+        width: 3rem;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .right-f {
+        border: 10px solid;
+        border-left: none;
+        height: 100%;
+        width: 3rem;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

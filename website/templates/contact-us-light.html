@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact Us {% endblock %}
+{% block content %}
+
+
+    <!-- Main -->
+    <main>
+        <!-- Page Title -->
+        <section class="parallax effect-section page-heading" style="background-image: url(static/img/1600x900.jpg);">
+            <div class="mask bg-black opacity-8"></div>
+            <div class="container position-relative">
+                <div class="row align-items-center justify-content-center min-vh-40">
+                    <div class="col-lg-8 text-center">
+                        <h6 class="text-white-50 font-w-500">We are awesome designer</h6>
+                        <h1 class="display-4 text-white m-0">Contact Us</h1>
+                        <ol class="breadcrumb light mb-0 mt-3 justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+        <!-- Section -->
+        <section class="section bg-no-repeat bg-right-center" style="background-image: url(static/img/effect/map-bg-2.png);">
+            <div class="container">
+                <div class="row section-heading">
+                    <div class="col-lg-8 col-xl-7">
+                        <h2 class="display-4 mb-3">Need a hand?</h2>
+                        <span class="w-50px h-3px bg-primary d-block mb-4"></span>
+                        <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-6 mb-lg-0">
+                        <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="static/plugin/mail/bat/rd-mailform.php">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input id="contact-name" type="text" name="name" placeholder="Rachel Roth" data-constraints="@Required" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input id="contact-email" type="email" name="email" placeholder="name@example.com" data-constraints="@Required" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input id="contact-subject" type="text" name="subject" placeholder="Subject" data-constraints="@Required" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="contact-message" name="message" rows="4" placeholder="Hi there, I would like to ..." data-constraints="@Required"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100" type="submit" name="send">Get Started</button>
+                                    <div class="snackbars" id="form-output-global"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 col-xl-4 ms-auto">
+                        <h5 class="m-20px-b body-color">Reach out now!</h5>
+                        <div class="h1 theme-color"></div>
+                        <div class="d-flex align-items-center py-2 py-lg-3">
+                            <div class="icon icon-primary-light rounded-circle">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="col ps-3">
+                                <h6 class="h4 m-0">+01 856 965 8595</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 py-lg-3">
+                            <div class="icon icon-primary-light rounded-circle">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="col ps-3">
+                                <h6 class="h4 m-0">info@yourdomain.com</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 py-lg-3">
+                            <div class="icon icon-primary-light rounded-circle">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <div class="col ps-3">
+                                <h6 class="h4 m-0">301 The Greenhouse, Custard Factory, LD, E2 8DY.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section -->
+        <div class="section pt-0">
+            <div class="container">
+                <div class="ratio ratio-21x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.840107317064!2d144.955925!3d-37.817214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1520156366883" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End Main -->
+
+
+{% endblock %}
