@@ -617,74 +617,25 @@
                     </div>
                 </div>
                 <div class="row g-4">
+                  {% for team in teams %}
                     <div class="col-lg-3 col-sm-6">
                         <div class="hover-top-in">
                             <div>
-                                <img class="rounded" src="{% static 'website/static/img/1000x1000.jpg' %}" title="" alt="">
+                                <img class="rounded" src="{{ team.photo.url }}" title="" alt="">
                             </div>
                             <div class="mx-3 shadow bg-white border rounded-3 position-relative mt-n4 p-4 text-center hover-top--in">
-                                <h6 class="mb-2">Nancy Bayers</h6>
-                                <small>Co-Founder</small>
+                                <h6 class="mb-2">{{team.first_name}} {{team.last_name}}</h6>
+                                <small>{{team.designation}}</small>
                                 <div class="nav justify-content-center pt-3">
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" target ='_blank' href="{{team.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" target ='_blank' href="{{team.xlink}}"><i class="fab fa-twitter"></i></a>
+                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" target ='_blank' href="{{team.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" target ='_blank' href="{{team.instgram}}"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="hover-top-in">
-                            <div>
-                                <img class="rounded" src="{% static 'website/static/img/1000x1000.jpg' %}" title="" alt="">
-                            </div>
-                            <div class="mx-3 shadow bg-white border rounded-3 position-relative mt-n4 p-4 text-center hover-top--in">
-                                <h6 class="mb-2">Nancy Bayers</h6>
-                                <small>Co-Founder</small>
-                                <div class="nav justify-content-center pt-3">
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="hover-top-in">
-                            <div>
-                                <img class="rounded" src="{% static 'website/static/img/1000x1000.jpg' %}" title="" alt="">
-                            </div>
-                            <div class="mx-3 shadow bg-white border rounded-3 position-relative mt-n4 p-4 text-center hover-top--in">
-                                <h6 class="mb-2">Nancy Bayers</h6>
-                                <small>Co-Founder</small>
-                                <div class="nav justify-content-center pt-3">
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="hover-top-in">
-                            <div>
-                                <img class="rounded" src="{% static 'website/static/img/1000x1000.jpg' %}" title="" alt="">
-                            </div>
-                            <div class="mx-3 shadow bg-white border rounded-3 position-relative mt-n4 p-4 text-center hover-top--in">
-                                <h6 class="mb-2">Nancy Bayers</h6>
-                                <small>Co-Founder</small>
-                                <div class="nav justify-content-center pt-3">
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="icon icon-sm bg-primary text-white rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 {% endfor %}
                 </div>
             </div>
         </section>
